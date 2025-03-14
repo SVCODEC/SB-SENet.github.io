@@ -18,9 +18,18 @@
 	   justify-content: center;
     }
 	.custom-width-container {
-	    max-width: 1400px; 
+	    max-width: 1800px; 
 	    margin: 0 auto; 
-	}	  
+	}
+		  .table th,
+.table td {
+    white-space: nowrap; /* 防止内容换行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table-responsive {
+    overflow: visible; /* 让表格超出部分显示，配合容器宽度 */
+}
 
    .image-container img {
       width: 600px;
