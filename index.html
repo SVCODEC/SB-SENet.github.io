@@ -41,7 +41,7 @@ h2 span {
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
 	<div class="text-center">
-		<h1>SVCODEC:</h1>
+		<h1>SB-SENet:</h1>
         <h3><span>SB-SENet: Diffusion Model Based on Schrödinger Bridge for Speech Enhancement</span></h3>
 		<br> 
 		<p>  
@@ -49,7 +49,6 @@ h2 span {
 <!-- 			Wenbin Jiang<sup>2</sup>,  -->
 			Guigeng Li<sup>1</sup>, 
 			Peifei Wu<sup>1</sup>, 
-
 			Yong Gao<sup>2</sup>, 
 <!-- 			Tianpei Liu<sup>3</sup>,  -->
 			Hao Zhang<sup>1*</sup>,
@@ -91,16 +90,16 @@ h2 span {
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
 	<h2 id="model-overview" style="text-align: center;">
-		SVCODEC Model Architecture	
+		SB-SENet Model Architecture	
 	</h2>
 		<p style="text-align: center;">
-			<img src="pics/Model.png" width="1000" alt="">
+			<img src="pics/Model-SBSENet.png" width="1000" alt="">
 		</p>
 <!-- 	       <p style="text-align: center;">
 		SVCODEC Model Architecture. 
 		</p> -->
 		<p style="text-align: center;">
-		Part I:The generator (a) of the GAN network which consists of encoder (a1), vector quantizer (a2) and decoder (a3) and used to generate synthesized speech (y) which will be input to the discriminator (b) of the GAN network. Part II: The efficient discriminator (b), consisting of a multi-period discriminator (b1) and a multi-scale discriminator (b2).
+		Network structure of SB-SENet. Key components include: (a) Magnitude Modulation Module, (b) Schrödinger Bridge-based SDE Solver, (c) Transformer Network, and (d) U-Net Network.
 		</p>
 </div>
 
