@@ -18,24 +18,30 @@
 			  justify-content: center;
 		  }
 		  .custom-width-container {
-			  max-width: 1800px; 
-			  margin: 0 auto; 
+			  max-width: none; /* 取消最大宽度限制 */ 
+			  width: 100%;
 			  padding: 0;
+		  }
+		  .ablation-table-wrap {
+			  overflow-x: visible; /* 显示溢出内容 */ 
+			  width: 100%;
 		  }
 		  .ablation-table-container { 
 			  width: 100%;
-			  overflow-x: auto; /* 小屏幕时允许滚动 */
+			  overflow-x: visible; /* 小屏幕时允许滚动 */
 		  }
 		  .ablation-table {
-			  min-width: 1800px; /* 强制表格最小宽度 */
+			  min-width: 10000px; /* 强制表格最小宽度 */
 			  table-layout: fixed;
+			  width: 100%;
 		  }
 		  .ablation-table th,
 		  .ablation-table td {
-			  width: 200px; /* 固定列宽 */
+			  width: 180px; /* 固定列宽 */
 			  white-space: nowrap;
 			  overflow: hidden;
 			  text-overflow: ellipsis;
+			  box-sizing: border-box;
 		  }
 		  .table th,
 		  .table td {
@@ -133,7 +139,7 @@
 
 <div class="container-fluid pt-5 mt-5 shadow p-5 mb-5 bg-white rounded custom-width-container">
 	<h2 style="text-align: center;"> Output Speech of <span>Ablation Experiments</span> </h2>
-	 <div class="ablation-table-container">
+	 <div class="ablation-table-wrap">
 <!-- 		<div class="table-responsive pt-3" tabindex="0"> -->
 <!-- 	<div style="overflow: visible;">  -->
 <!-- 			<table class="table table-hover pt-2" style="width: 100%;"> -->
