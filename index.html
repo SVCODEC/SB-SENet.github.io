@@ -76,6 +76,9 @@
 			  padding-left: 5px; /* 保留左侧内边距，模拟响应式效果 */
 			  padding-right: 5px; /* 保留右侧内边距，模拟响应式效果 */
 		  }
+		  .bold-top-border {
+			  border-top: 3px solid black; /* 顶部边框加粗，3px可调整粗细 */
+		  }
 /* 		  .container {
 			  max-width: 2000px !important; /* 强制覆盖，可调整数值 */
 			  padding-left: 15px; /* 保留响应式内边距 */
@@ -163,7 +166,6 @@
 			<table class="table table-hover pt-2">
 				<thead>
 				<tr style="border-top: 2px solid black;">
-					<tr>
 						<th style="text-align: center">Models</th>
 						<th style="text-align: center">Year</th>
 					  	<th style="text-align: center">Input</th>
@@ -176,7 +178,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<tr style="border-top: 2px solid black;">
+				<tr class="bold-top-border">
 					<td style="text-align: center;vertical-align:middle; width: 160px">Noisy</td>
 					<td style="text-align: center;vertical-align:middle; width: 160px">-</td>
 					<td style="text-align: center;vertical-align:middle; width: 160px">-</td>
