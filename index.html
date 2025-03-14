@@ -12,35 +12,50 @@
 	<title>SB-SENet</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	  <style>
-   .image-container {
-      display: flex;
-      flex-wrap: wrap;
-	   justify-content: center;
-    }
-	.custom-width-container {
-	    max-width: 1800px; 
-	    margin: 0 auto; 
-	}
+		  .image-container {
+			  display: flex;
+			  flex-wrap: wrap;
+			  justify-content: center;
+		  }
+		  .custom-width-container {
+			  max-width: 1800px; 
+			  margin: 0 auto; 
+			  padding: 0;
+		  }
+		  .ablation-table-container { 
+			  width: 100%;
+			  overflow-x: auto; /* 小屏幕时允许滚动 */
+		  }
+		  .ablation-table {
+			  min-width: 1800px; /* 强制表格最小宽度 */
+			  table-layout: fixed;
+		  }
+		  .ablation-table th,
+		  .ablation-table td {
+			  width: 200px; /* 固定列宽 */
+			  white-space: nowrap;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+		  }
 		  .table th,
-.table td {
-    white-space: nowrap; /* 防止内容换行 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.table-responsive {
-    overflow: visible; /* 让表格超出部分显示，配合容器宽度 */
-}
-
-   .image-container img {
-      width: 600px;
-    }
-h2 span {
-      font-weight: bold;
-      color: blue;
-    }
-   .justify-text {
-      text-align: justify;
-    }
+		  .table td {
+			  white-space: nowrap; /* 防止内容换行 */
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+		  }
+		  .table-responsive {
+			  overflow: visible; /* 让表格超出部分显示，配合容器宽度 */
+		  }
+		  .image-container img {
+			  width: 600px;
+		  }
+		  h2 span {
+			  font-weight: bold;
+			  color: blue;
+		  }
+		  .justify-text {
+			  text-align: justify;
+		  }
   </style>
 </head>
 
@@ -118,9 +133,11 @@ h2 span {
 
 <div class="container-fluid pt-5 mt-5 shadow p-5 mb-5 bg-white rounded custom-width-container">
 	<h2 style="text-align: center;"> Output Speech of <span>Ablation Experiments</span> </h2>
-		<div class="table-responsive pt-3" tabindex="0">
+	 <div class="ablation-table-container">
+<!-- 		<div class="table-responsive pt-3" tabindex="0"> -->
 <!-- 	<div style="overflow: visible;">  -->
-			<table class="table table-hover pt-2" style="width: 100%;">
+<!-- 			<table class="table table-hover pt-2" style="width: 100%;"> -->
+		  <table class="table table-hover pt-2 ablation-table">
 				<thead>
 					<tr>
 					<th style="text-align: center">name</th>
